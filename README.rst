@@ -11,10 +11,11 @@
 
 Pifpaf is a suite of `fixtures`_ and a command-line tool that allows to start
 and stop daemons for a quick throw-away usage. This is typically useful when
-needing these daemons to run `integration testing`_. It originaly evolved from
-its precussor `overtest`_.
+needing these daemons to run `integration testing`_. It originally evolved from
+its precursor `overtest`_.
 
 .. _fixtures: https://pypi.python.org/pypi/fixtures
+.. _integration testing: https://en.wikipedia.org/wiki/Integration_testing
 .. _overtest: https://github.com/jd/overtest
 
 Supported daemons
@@ -68,6 +69,7 @@ Pifpaf currently supports:
 
 Usage
 =====
+
 To use Pifpaf, simply call the `pifpaf run $daemon <command>` program that you
 need. It will setup the temporary environment and export a few environment
 variable for you to access it::
@@ -109,6 +111,7 @@ the defined function `pifpaf_stop`.
 
 Environment variables
 =====================
+
 Pifpaf exports a few environment variable:
 
 * `PIFPAF_DAEMON` which contains the name of the daemon launched
@@ -117,11 +120,9 @@ Pifpaf exports a few environment variable:
 * `PIFPAF_$daemon_*` variables, which contains daemon specific variables,
   such as port, database name, URL, etc.
 
-.. _integration testing: https://en.wikipedia.org/wiki/Integration_testing
-
-
 Running several programs at once
 ================================
+
 Pifpaf provides the ability to change the prefix of its environment variable,
 allowing you to nest several Pifpaf instances and therefore running several
 daemons at once::
