@@ -39,7 +39,7 @@ jobs:
         # NOTE: npm and nodejs are already installed
         run: |
           sudo apt-get update
-          sudo apt-get install mysql-server redis-server zookeeper ceph librados-dev python3-dev gcc liberasurecode-dev liberasurecode1 postgresql libpq-dev etcd
+          sudo apt-get install mysql-server redis-server zookeeper ceph librados-dev python3-dev gcc liberasurecode-dev liberasurecode1 postgresql libpq-dev etcd memcached
       - name: Start PostgreSQL
         run: sudo systemctl start postgresql.service
       - name: Start MySQL
