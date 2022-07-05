@@ -69,7 +69,7 @@ class EtcdDriver(drivers.Driver):
                                                   for i, (peer_url, client_url)
                                                   in enumerate(http_urls)),
                     "--initial-cluster-state", "new",
-                ], wait_for_line="listening for peers on")
+                ], wait_for_port=self.port + (2 * i))
 
             endpoints = ",".join(client_url
                                  for peer_url, client_url in http_urls)
